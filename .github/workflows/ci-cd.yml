@@ -1,0 +1,71 @@
+
+---
+
+# 🧰 6. Workflow do GitHub Actions — `.github/workflows/ci-cd.yml`
+
+name: CI/CD Pipeline - Java Maven
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  # 🏗 STAGE 1 — BUILD
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Configurar JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Compilar e empacotar
+        run: mvn clean package -DskipTests
+
+      - name: Salvar artefato gerado
+        uses: actions/upload-artifact@v4
+        with:
+          name: meu-jar
+          path: target/*.jar
+
+  # 🧪 STAGE 2 — TEST
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Configurar JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Executar testes
+        run: mvn test
+
+  # 🚀 STAGE 3 — DEPLOY
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
+    if: github.ref == 'refs/heads/main'  # só roda na branch main
+
+    steps:
+      - name: Baixar artefato do build
+        uses: actions/download-artifact@v4
+        with:
+          name: meu-jar
+          path: deploy/
+
+      - name: Simular deploy
+        run: |
+          echo "Iniciando deploy do artefato:"
+          ls -lh deploy/
+          echo "Deploy finalizado com sucesso!"
