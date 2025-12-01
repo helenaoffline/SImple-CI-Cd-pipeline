@@ -34,6 +34,10 @@ public class Main {
                 //superbond
             }
 
+            for (int j = 1; j <= 5; j++) {
+                //mario world is awesome
+            }
+
            // mimosa com narget
         }
     }
