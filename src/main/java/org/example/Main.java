@@ -17,6 +17,7 @@ public class Main {
             for (int j = 1; j <= 5; j++) {
                 System.out.println("j = " + j);
                 System.out.println("Banana fan");
+                System.out.println(j);
             }
 
            // mimosa com narget
