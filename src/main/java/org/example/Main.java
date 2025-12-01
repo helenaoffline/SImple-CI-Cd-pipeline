@@ -18,6 +18,8 @@ public class Main {
                 System.out.println("j = " + j);
                 System.out.println("Banana fan");
                 System.out.println(j);
+                System.out.println(j);
+                //vamos comprar um boa fanta
             }
 
            // mimosa com narget
