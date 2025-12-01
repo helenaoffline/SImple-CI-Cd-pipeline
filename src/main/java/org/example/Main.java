@@ -20,10 +20,7 @@ public class Main {
 
             System.out.println(i);
             for (int j = 1; j <= 5; j++) {
-                System.out.println("j = " + j);
-                System.out.println("Banana fan");
-                System.out.println(j);
-                System.out.println(j);
+                System.out.println("love");
 
                 for (int k = 1; k <= 5; k++) {
                     System.out.println("k = " + k);
@@ -34,6 +31,9 @@ public class Main {
             for (int j = 1; j <= 5; j++) {
                 //mario world is awesome
             }
+            //searching
+
+
 
            // mimosa com narget
 
