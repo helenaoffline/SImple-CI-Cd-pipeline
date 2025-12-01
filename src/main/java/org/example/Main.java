@@ -21,6 +21,8 @@ public class Main {
                 System.out.println(j);
                 //vamos comprar um boa fanta
                 //vamos comprar uma garrafa
+                //add mousa
+                //add mousepad
             }
 
            // mimosa com narget
