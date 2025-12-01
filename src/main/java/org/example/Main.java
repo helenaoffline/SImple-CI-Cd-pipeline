@@ -24,13 +24,10 @@ public class Main {
                 System.out.println("Banana fan");
                 System.out.println(j);
                 System.out.println(j);
-                //vamos comprar um boa fanta
-                //vamos comprar uma garrafa
-                //add mousa
-                //bootle
-                //add fone
-                //cigana
-                //superbond
+
+                for (int k = 1; k <= 5; k++) {
+                    System.out.println("k = " + k);
+                }
             }
             //bananarama
 
@@ -41,6 +38,8 @@ public class Main {
            // mimosa com narget
 
             //esquizoie
+
+            // the bear
         }
     }
 }
