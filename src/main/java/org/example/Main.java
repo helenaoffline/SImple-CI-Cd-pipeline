@@ -27,8 +27,7 @@ public class Main {
                 //vamos comprar um boa fanta
                 //vamos comprar uma garrafa
                 //add mousa
-                //add mousepad
-                //add caneta
+                //bootle
                 //add fone
                 //cigana
                 //superbond
