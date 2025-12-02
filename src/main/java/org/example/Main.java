@@ -32,8 +32,10 @@ public class Main {
                 //mario world is awesome
             }
             //searching
-
-
+        for (int j = 1; j <= 5; j++) {
+            System.out.println("je cherche mon chat");
+        }
+//coco
 
            // mimosa com narget
 
